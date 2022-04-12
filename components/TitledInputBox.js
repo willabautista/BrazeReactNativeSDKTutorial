@@ -8,7 +8,7 @@ const TitledInputBox = (props) => {
         <View style={styles.container}>
             <Text>{props.title}</Text>
             <View style={styles.textBox}>
-                <TextInput multiline={false} onChangeText={value => props.setValue(value)} />
+                <TextInput multiline={false} onChangeText={value => props.setValue(value)} placeholder={props.placeholder} />
             </View>
         </View>
     );

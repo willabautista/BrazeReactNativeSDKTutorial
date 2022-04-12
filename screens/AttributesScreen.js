@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native';
 import TitledInputBox from '../components/TitledInputBox';
 import KeyValueInputBox from '../components/KeyValueInputBox';
+import ReactAppboy from 'react-native-appboy-sdk';
 
 const AttributesScreen = () => {
     const [firstName, setFirstName] = useState('')
@@ -22,64 +23,65 @@ const AttributesScreen = () => {
     const setStandardAttributes = () => {
         /* TODO: add SDK method */
         if (firstName) {
-
+            ReactAppboy.setFirstName(firstName)
         }
 
         /* TODO: add SDK method */
         if (lastName) {
-
+            ReactAppboy.setLastName(lastName)
         }
 
         /* TODO: add SDK method */
         if (email) {
-
+            ReactAppboy.setEmail(email)
         }
 
         /* TODO: add SDK method */
         if (country) {
-
+            ReactAppboy.setCountry(country)
         }
 
         /* TODO: add SDK method */
         if (homeCity) {
-
+            ReactAppboy.setHomeCity(homeCity)
         }
 
         /* TODO: add SDK method */
         if (language) {
-
+            ReactAppboy.setLanguage(language)
         }
 
         /* TODO: add SDK method */
         if (gender) {
-
+            ReactAppboy.setGender(gender)
         }
 
         /* TODO: add SDK method */
         if (phone) {
-
+            ReactAppboy.setPhoneNumber(phone)
         }
 
         /* TODO: add SDK method */
         if (birthday) {
-
+            var birthaySplit = birthday.split('/')
+            ReactAppboy.setDateOfBirth(parseInt(birthaySplit[2]), parseInt(birthaySplit[1]), parseInt(birthaySplit[0]))
         }
 
         /* TODO: add SDK method */
         if (pushSub) {
-
+            ReactAppboy.setPushNotificationSubscriptionType(pushSub)
         }
 
         /* TODO: add SDK method */
         if (emailSub) {
-
+            ReactAppboy.setEmailNotificationSubscriptionType(emailSub)
         }
     }
 
     const setCustomAttribute = () => {
         /* TODO: add SDK method */
         if (customAttributeKey && customAttributeValue) {
-
+            ReactAppboy.setCustomUserAttribute(customAttributeKey, customAttributeValue)
         }
     }
 
@@ -93,9 +95,9 @@ const AttributesScreen = () => {
                 <TitledInputBox title={'Country'} setValue={setCountry} />
                 <TitledInputBox title={'Home City'} setValue={setHomeCity} />
                 <TitledInputBox title={'Lanugage'} setValue={setLanguage} />
-                <TitledInputBox title={'Gender'} setValue={setGender} />
+                <TitledInputBox title={'Gender'} setValue={setGender} placeholder={'m, f, u, o, n, p'} />
                 <TitledInputBox title={'Phone'} setValue={setPhone} />
-                <TitledInputBox title={'Birthday'} setValue={setBirthday} />
+                <TitledInputBox title={'Birthday'} setValue={setBirthday} placeholder={'dd/mm/yyyy'} />
                 <TitledInputBox title={'Push Sub'} setValue={setPushSub} />
                 <TitledInputBox title={'Email Sub'} setValue={setEmailSub} />
                 <Button title={'Set Standard Attributes'} onPress={setStandardAttributes} />

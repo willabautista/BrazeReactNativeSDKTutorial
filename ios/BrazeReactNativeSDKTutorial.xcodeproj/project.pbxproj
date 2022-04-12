@@ -11,6 +11,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		42ED584127F3837A0044F823 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 42ED584027F3837A0044F823 /* main.jsbundle */; };
 		607B1AE6B9268E8B783DE952 /* libPods-BrazeReactNativeSDKTutorial-BrazeReactNativeSDKTutorialTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0263A7CC15715E51278952C1 /* libPods-BrazeReactNativeSDKTutorial-BrazeReactNativeSDKTutorialTests.a */; };
 		74806429AA53DC385DF4D6C7 /* libPods-BrazeReactNativeSDKTutorial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9642714A6A220B24291E843D /* libPods-BrazeReactNativeSDKTutorial.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -38,6 +39,7 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BrazeReactNativeSDKTutorial/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = BrazeReactNativeSDKTutorial/main.m; sourceTree = "<group>"; };
 		1EAD5C6C8BDFEDBB86A38DF8 /* Pods-BrazeReactNativeSDKTutorial-BrazeReactNativeSDKTutorialTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrazeReactNativeSDKTutorial-BrazeReactNativeSDKTutorialTests.debug.xcconfig"; path = "Target Support Files/Pods-BrazeReactNativeSDKTutorial-BrazeReactNativeSDKTutorialTests/Pods-BrazeReactNativeSDKTutorial-BrazeReactNativeSDKTutorialTests.debug.xcconfig"; sourceTree = "<group>"; };
+		42ED584027F3837A0044F823 /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		7303FD2461DF10F9B3FA4730 /* Pods-BrazeReactNativeSDKTutorial-BrazeReactNativeSDKTutorialTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrazeReactNativeSDKTutorial-BrazeReactNativeSDKTutorialTests.release.xcconfig"; path = "Target Support Files/Pods-BrazeReactNativeSDKTutorial-BrazeReactNativeSDKTutorialTests/Pods-BrazeReactNativeSDKTutorial-BrazeReactNativeSDKTutorialTests.release.xcconfig"; sourceTree = "<group>"; };
 		7470E73C21C206D53BB5006C /* Pods-BrazeReactNativeSDKTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrazeReactNativeSDKTutorial.debug.xcconfig"; path = "Target Support Files/Pods-BrazeReactNativeSDKTutorial/Pods-BrazeReactNativeSDKTutorial.debug.xcconfig"; sourceTree = "<group>"; };
 		7BC6CB8C03273F12E76AC331 /* Pods-BrazeReactNativeSDKTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrazeReactNativeSDKTutorial.release.xcconfig"; path = "Target Support Files/Pods-BrazeReactNativeSDKTutorial/Pods-BrazeReactNativeSDKTutorial.release.xcconfig"; sourceTree = "<group>"; };
@@ -91,7 +93,6 @@
 				1EAD5C6C8BDFEDBB86A38DF8 /* Pods-BrazeReactNativeSDKTutorial-BrazeReactNativeSDKTutorialTests.debug.xcconfig */,
 				7303FD2461DF10F9B3FA4730 /* Pods-BrazeReactNativeSDKTutorial-BrazeReactNativeSDKTutorialTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -128,6 +129,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				42ED584027F3837A0044F823 /* main.jsbundle */,
 				13B07FAE1A68108700A75B9A /* BrazeReactNativeSDKTutorial */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* BrazeReactNativeSDKTutorialTests */,
@@ -243,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42ED584127F3837A0044F823 /* main.jsbundle in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);

@@ -7,7 +7,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import AttributesScreen from './screens/AttributesScreen';
 import EventsScreen from './screens/EventsScreen';
-import ReactAppboy from "react-native-appboy-sdk";
+import ReactAppboy from 'react-native-appboy-sdk';
+import MessagingScreen from './screens/MessagingScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -15,7 +16,7 @@ const App = () => {
 
   useEffect(() => {
     /* TODO: Add an External ID */
-    ReactAppboy.changeUser('external_id');
+    ReactAppboy.changeUser('100');
   }, []);
 
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <Tab.Navigator>
         <Tab.Screen name="Attributes" component={AttributesScreen} />
         <Tab.Screen name="Events" component={EventsScreen} />
+        <Tab.Screen name="Content Cards" component={MessagingScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native';
 import KeyValueInputBox from '../components/KeyValueInputBox';
 import TitledInputBox from '../components/TitledInputBox';
+import ReactAppboy from 'react-native-appboy-sdk';
 
 const EventsScreen = () => {
     const [eventName, setEventName] = useState('')
@@ -9,7 +10,7 @@ const EventsScreen = () => {
     const [eventPropertyValue, setEventPropertyValue] = useState('')
 
     const [productId, setProductId] = useState('')
-    const [price, setPrice] = useState(0)
+    const [price, setPrice] = useState('')
     const [currencyCode, setCurrencyCode] = useState('')
     const [quantity, setQuantity] = useState(0)
     const [purchasePropertyKey, setPurchasePropertyKey] = useState('')
@@ -22,10 +23,11 @@ const EventsScreen = () => {
                 eventProperty[eventPropertyKey] = eventPropertyValue
 
                 /* TODO: add SDK method */
+                ReactAppboy.logCustomEvent(eventName, eventProperty)
             }
             else {
                 /* TODO: add SDK method */
-
+                ReactAppboy.logCustomEvent(eventName)
             }
         }
     }
@@ -37,10 +39,11 @@ const EventsScreen = () => {
                 purchaseProperty[purchasePropertyKey] = purchasePropertyValue
 
                 /* TODO: add SDK method */
+                ReactAppboy.logPurchase(productId, price, currencyCode, parseInt(quantity), purchaseProperty)
             }
             else {
                 /* TODO: add SDK method */
-
+                ReactAppboy.logPurchase(productId, price, currencyCode, parseInt(quantity))
             }
         }
     }

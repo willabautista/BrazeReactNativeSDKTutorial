@@ -49,7 +49,7 @@ static void InitializeFlipper(UIApplication *application) {
   [self.window makeKeyAndVisible];
 
   /* TODO: Add API Key from the Manage Settings page of the Dashboard. */
-  [Appboy startWithApiKey:@"YOUR-APP-IDENTIFIER-API-KEY"
+  [Appboy startWithApiKey:@"20da1806-cb22-4014-9d72-d1a74da0e352"
     inApplication:application
     withLaunchOptions:launchOptions];
 
